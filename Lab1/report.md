@@ -50,8 +50,10 @@
 **1. Required Screenshots**
 *   **Packet 104 (RRCSetupRequest):**
    <img width="2878" height="1058" alt="Screenshot 2026-09-23 094958" src="https://github.com/user-attachments/assets/958314c6-5369-461f-a2c1-2e244658be76" />
+   
 *   **Packet 105 (RRCSetup):**
     <img width="2880" height="1406" alt="Screenshot 2026-09-23 095047" src="https://github.com/user-attachments/assets/33e97d48-c8c2-4a0c-837b-e580a00b52ab" />
+    
 *   **Packet 108 (RRCSetupComplete):**
    <img width="2880" height="1390" alt="Screenshot 2026-09-23 095632" src="https://github.com/user-attachments/assets/d9da4321-fe01-43c0-b3d0-00aa857dae60" />
 
@@ -112,6 +114,7 @@
   <img width="2866" height="1408" alt="Screenshot 2026-09-23 093637" src="https://github.com/user-attachments/assets/ddc384ab-4e4b-4259-92c1-c082dd8edd68" />
 
   <img width="2878" height="1448" alt="Screenshot 2026-09-23 093333" src="https://github.com/user-attachments/assets/ef12ec1b-12f9-45be-9036-f80ea6656859" />
+  
 *   **ICMP Echo Request/Reply inside GTP-U:**
    <img width="2878" height="1638" alt="Screenshot 2026-09-23 093532" src="https://github.com/user-attachments/assets/6dd678cb-2267-4ccd-8654-9cdda3b2c5c4" />
 
@@ -125,8 +128,6 @@
 
 ---
 
-### Checkpoint 6: Final Sequence Diagram
-[KÉO THẢ ẢNH SƠ ĐỒ SEQUENCE DIAGRAM DO BẠN VẼ VÀO ĐÂY]
 ## Checkpoint 6: Final Sequence Diagram
 *The diagram below distinguishes Control Plane signaling (solid lines) and User Plane traffic (dotted lines).*
 
@@ -156,7 +157,7 @@ sequenceDiagram
     UE->>gNB: RRC UL Information Transfer [Encrypted NAS Registration Complete]
     gNB->>AMF: NGAP UplinkNASTransport [Encrypted NAS Registration Complete]
     
-    AMF<->UE: PDU Session Establishment (via gNB)
+    AMF<<->>UE: PDU Session Establishment (via gNB)
 
     %% User Plane (Dotted Lines)
     UE-->>gNB: ICMP Echo Request
