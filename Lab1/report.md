@@ -1,5 +1,5 @@
 # Lab 1: Analyzing UE–gNB Connectivity in an OAI 5G SA Network
-**Student Name:** Bui Huu Phuoc (裴有福)
+**Student Name:** Bui Huu Phuoc - 裴有福
 **Student ID:** B11202010
 
 ---
