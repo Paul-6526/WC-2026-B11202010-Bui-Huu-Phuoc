@@ -19,6 +19,15 @@
 ### Checkpoint 2: Basic Architecture
 **1. IP Address Table**
 
+**Filter: nr-rrc**
+<img width="2880" height="1638" alt="gNB and AMF" src="https://github.com/user-attachments/assets/14985ebf-629d-427a-9514-47dee5b6d913" />
+**Filter: gtp**
+<img width="2878" height="1448" alt="Screenshot 2026-09-23 093333" src="https://github.com/user-attachments/assets/f6775a70-407d-456e-8dc2-6a0aeb7fc6c7" />
+**Filter: icmp**
+<img width="2866" height="1408" alt="Screenshot 2026-09-23 093637" src="https://github.com/user-attachments/assets/418d8626-583a-4b2a-9474-957082e0ce9f" />
+
+
+
 | Component | IP address | Evidence from the capture |
 | :--- | :--- | :--- |
 | **UE PDU address** | 10.0.0.2 | Assigned in PDU Session Establishment Accept |
