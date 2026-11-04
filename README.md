@@ -25,7 +25,7 @@ In this lab, you will use Wireshark to analyze how a UE establishes an RRC conne
     -  **Deadline : 12:00, Oct. 5**
     - Goal:
 In this lab,you will compare three 5-second UDP iperf3 tests. You will learn how TDD slot allocation can affect downlink and uplink performance.
-    - - delivery: **put your file link here**.
+    - - delivery: [My Lab 1 Report](https://github.com/Paul-6526/WC-2026-B11202010-Bui-Huu-Phuoc/tree/main/Lab2).
     -  [ ] Peer review : [Vote the Top3](https://docs.google.com/forms/d/e/1FAIpQLScz-Kt_9ArkXOl8sG99549xqGK7W7vAqoY4lbbc3ph03zvFaw/viewform?usp=publish-editor) (DL: 23:59, Oct.7)
 
 
