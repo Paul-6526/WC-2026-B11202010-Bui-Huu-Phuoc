@@ -203,23 +203,34 @@ The tables below illustrate the TDD time allocation derived from SIB1. The refer
 
 **TCP RTT Example:**
 
-| Scenario | Example TCP ACK RTT |
-| :--- | :--- |
-| **A** | 485.000 microseconds |
+| Scenario | Packet number | Example TCP ACK RTT |
+| :--- | :--- | :--- |
+| **A** | 1833 | 485.000 microseconds |
+| **B** | 2079 | 17.068 milliseconds |
+| **C** | 1445 | 11.704 milliseconds |
 
-*Proof Screenshot:* <img width="2880" height="1416" alt="Screenshot 2026-10-07 073120" src="https://github.com/user-attachments/assets/24f61f59-0fc8-4fa5-bb58-e8a8a680910f" />
+*Proof Screenshots:* 
+*   **Scenario A:** <img width="2880" height="1416" alt="Screenshot 2026-10-07 073120" src="https://github.com/user-attachments/assets/24f61f59-0fc8-4fa5-bb58-e8a8a680910f" />
+*   **Scenario B:** <img width="2880" height="1686" alt="Screenshot 2026-11-04 190721" src="https://github.com/user-attachments/assets/ecd77bef-6739-4071-919e-683d6a0ab2a3" />
+*   **Scenario C:** <img width="2880" height="1670" alt="Screenshot 2026-11-04 191242" src="https://github.com/user-attachments/assets/fb0a5fa4-0ce8-48c4-89b4-dd02a804cf33" />
 
 **Packet Interval Example:**
 
-| Flow | Packet numbers | Time interval |
-| :--- | :--- | :--- |
-| **UDP** | 1825 - 1826 | 49.905 milliseconds |
+| Scenario | Display filter | Packet numbers | Time interval |
+| :--- | :--- | :--- | :--- |
+| **A** | `udp` | 1825 - 1826 | 49.905 milliseconds |
+| **B** | `udp` | 2136 - 2137 | 2.161 milliseconds |
+| **C** | `udp` | 1345 - 1346 | 45.730 milliseconds |
 
-*Proof Screenshot:* <img width="2880" height="1282" alt="Screenshot 2026-10-07 073258" src="https://github.com/user-attachments/assets/27853a17-0929-455a-b6dc-30680ad11c24" />
+*Proof Screenshots:* 
+* Scenario A: 
+<img width="2880" height="1282" alt="Screenshot 2026-10-07 073258" src="https://github.com/user-attachments/assets/27853a17-0929-455a-b6dc-30680ad11c24" />
 <img width="2880" height="1486" alt="Screenshot 2026-10-07 073313" src="https://github.com/user-attachments/assets/22868a8b-78a0-4437-a502-41a3f832ddeb" />
+   Scenario B:
+<img width="2880" height="1616" alt="Screenshot 2026-11-04 194952" src="https://github.com/user-attachments/assets/0d4617ed-c005-4768-a860-058a26234ea7" />
+   Scenario C:
+<img width="2880" height="1670" alt="Screenshot 2026-11-04 194437" src="https://github.com/user-attachments/assets/1453ca66-8f62-4dcf-9318-7e95f2b53c5a" />
 
-
----
 
 ## Final Questions
 
