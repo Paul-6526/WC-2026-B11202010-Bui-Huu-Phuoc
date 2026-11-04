@@ -153,7 +153,7 @@
 
 ---
 
-## Task 5 — Find GTP-U Information
+## Task 6 — Find GTP-U Information
 
 **GTP-U Information Table:**
 
@@ -173,7 +173,7 @@
 
 ---
 
-## Task 6 — TCP Retransmissions
+## Task 7 — TCP Retransmissions
 
 **TCP Retransmissions Table:**
 
@@ -193,7 +193,7 @@
 
 ---
 
-## Task 7 — RTT and Packet Interval
+## Task 8 — RTT and Packet Interval
 
 **TCP RTT Example:**
 
@@ -231,3 +231,5 @@
     No. As seen in Scenario C, while adding UL slots (Balanced setting) increased the throughput, it also caused a severe spike in packet loss. If packet loss becomes too high, the overall user experience will degrade significantly despite the higher raw bandwidth.
 7.  **Suggest one simple follow-up test that could improve throughput without producing too much packet loss.**
     A follow-up test could involve tuning the UDP sending rate (bandwidth parameter) of iperf3 to closely match the actual capacity of the "Balanced" TDD link, preventing buffer overflows at the gNB that lead to packet loss.
+8.  **What can the configuration captures tell you that the iperf3 JSON cannot? Why are separately recorded configuration captures not direct proof of the configuration during an earlier test?**
+    Configuration captures reveal the actual physical layer TDD slot structure (DL/UL ratio) broadcasted by the gNB via SIB1, whereas JSON only shows application-layer throughput. Separately recorded captures are not direct proof because network parameters could theoretically have been modified between the time the SIB1 was recorded and when the iperf3 test was executed.
