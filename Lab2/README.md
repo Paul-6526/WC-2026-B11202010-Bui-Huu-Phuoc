@@ -74,18 +74,83 @@
 
 ---
 
-## Task 4 — Is the TDD Setting Suitable?
+## Task 4 — Read SIB1 and Draw the TDD Configuration
+
+### 4.3 Record the TDD Parameters
+**TDD Parameters (pattern1):**
+
+| Item | DL-heavy: A/B | Balanced: C |
+| :--- | :--- | :--- |
+| **Configuration capture filename** | tdd-dl-heavy-sib1.pcapng | tdd-balanced-sib1.pcapng |
+| **SIB1 packet number** | 2 | 2 |
+| **referenceSubcarrierSpacing (kHz)** | 30 kHz | 30 kHz |
+| **dl-UL-TransmissionPeriodicity (ms)** | 5 ms | 2.5 ms |
+| **nrofDownlinkSlots** | 7 | 2 |
+| **nrofDownlinkSymbols** | 6 | 6 |
+| **nrofUplinkSlots** | 2 | 2 |
+| **nrofUplinkSymbols** | 4 | 4 |
+| **Is pattern2 present?** | No | No |
+
+*Proof Screenshots (SIB1 tdd-UL-DL-ConfigurationCommon):*
+*   **DL-heavy (A/B):** `[KÉO THẢ ẢNH SIB1 DL-HEAVY BẠN ĐÃ CHỤP VÀO ĐÂY]`
+*   **Balanced (C):** `[KÉO THẢ ẢNH SIB1 BALANCED BẠN ĐÃ CHỤP VÀO ĐÂY]`
+
+### 4.4 Draw the TDD Time Allocation
+
+`[KÉO THẢ HÌNH VẼ SƠ ĐỒ TDD ALLOCATION CỦA BẠN VÀO ĐÂY]`
+*(Mẹo vẽ: Tại SCS 30kHz, 1 Slot = 0.5ms = 14 symbols.
+- Mạch DL-heavy (5ms = 10 slots): 7 slot đầu là Full D. Slot thứ 8 có 6 symbol D, 4 symbol F, 4 symbol U. Hai slot 9,10 là Full U.
+- Mạch Balanced (2.5ms = 5 slots): 2 slot đầu Full D. Slot thứ 3 có 6 symbol D, 4 symbol F, 4 symbol U. Hai slot 4,5 là Full U. Sơ đồ 5ms sẽ lặp lại chu kỳ này 2 lần).*
+
+**Per-sequence Configuration Table:**
+
+| TDD setting | Repeating duration (ms) | Total reference slots | DL symbols | UL symbols | Flexible symbols | Configured UL symbol share (%) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **DL-heavy** | 5 | 10 | 104 | 32 | 4 | 22.86% |
+| **Balanced** | 2.5 | 5 | 34 | 32 | 4 | 45.71% |
+
+**Common 5 ms Comparison Table:**
+
+| TDD setting | Repeating duration (ms) | Repetitions in 5 ms | DL symbols in 5 ms | UL symbols in 5 ms | Flexible symbols in 5 ms |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **DL-heavy** | 5 | 1 | 104 | 32 | 4 |
+| **Balanced** | 2.5 | 2 | 68 | 64 | 8 |
+
+**Question: Can two patterns have the same UL symbol count per period but provide different numbers of UL symbols per unit time? Explain using your two tables.**
+**Answer:** Yes. Both patterns have exactly 32 UL symbols per repeating period. However, because the Balanced setting repeats every 2.5 ms (twice within a 5 ms interval), it provides a total of 64 UL symbols per 5 ms. In contrast, the DL-heavy setting repeats only once every 5 ms, providing just 32 UL symbols in the same timeframe.
+
+### 4.5 Connect SIB1 to the Performance Results
+
+| Scenario | Reference TDD setting | JSON traffic direction | Configured UL symbol share (%) | Throughput (Mbps) | Packet loss (%) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **A** | DL-heavy | Downlink | 22.86% | 90.65 | - |
+| **B** | DL-heavy | Uplink | 22.86% | 109.12 | 0.24% |
+| **C** | Balanced | Uplink | 45.71% | 124.42 | 2.13% |
+
+**Answers:**
+1.  **Which decoded TDD parameters differ between DL-heavy and balanced?**
+    The `dl-UL-TransmissionPeriodicity` (5 ms vs. 2.5 ms) and `nrofDownlinkSlots` (7 vs. 2) differ between the configurations.
+2.  **Which configuration provides more configured UL symbols per unit time?**
+    The Balanced configuration provides more UL symbols per unit time (64 UL symbols per 5 ms compared to 32 UL symbols for DL-heavy), as demonstrated by its higher UL symbol share (45.71% vs 22.86%).
+3.  **How does that difference help explain the B/C throughput comparison?**
+    More UL symbols provide the UE with more transmission opportunities (physical time resources) within the same timeframe, which explains why the uplink throughput in Scenario C is significantly higher than in Scenario B.
+4.  **Why can A and B use the same SIB1 TDD configuration even though their traffic directions differ?**
+    SIB1 broadcasts the common TDD slot structure for the entire cell, which dictates the fixed time-domain resources for all UEs simultaneously, regardless of whether an individual UE is currently performing uplink or downlink operations.
+
+---
+
+## Task 5 — Is the TDD Setting Suitable?
 
 **TDD Suitability Table:**
 
-| Scenario | TDD setting | Traffic direction | Do they match? |
+| Scenario | TDD setting | Traffic direction | Is the setting suitable for this direction? Why? |
 | :--- | :--- | :--- | :--- |
-| **A** | DL-heavy | Downlink | Yes. More DL slots provide more downlink transmission opportunities. |
-| **B** | DL-heavy | Uplink | No. A DL-heavy setting limits heavy uplink traffic because there are fewer UL slots. |
-| **C** | Balanced | Uplink | Yes. A balanced setting gives uplink traffic more opportunities than a DL-heavy setting. |
+| **A** | DL-heavy | Downlink | Yes. More DL resources provide more downlink transmission opportunities, making it highly suitable. |
+| **B** | DL-heavy | Uplink | No. A DL-heavy setting limits heavy uplink traffic because there are very few UL resources available. |
+| **C** | Balanced | Uplink | Yes. A balanced setting gives uplink traffic more transmission opportunities than the DL-heavy setting in this lab. |
 
-**Question: Why might Scenario C achieve better uplink throughput than Scenario B?**
-**Answer:** Scenario C uses a "Balanced" TDD setting, which allocates more uplink slots compared to the "DL-heavy" setting in Scenario B. With more UL slots available in each radio frame, the UE has more opportunities to transmit data, resulting in higher uplink throughput.
+**Question: Why might Scenario C achieve better uplink throughput than Scenario B? Refer to your SIB1 diagrams and measured results.**
+**Answer:** Based on the SIB1 diagrams, Scenario C's "Balanced" setting allocates 64 UL symbols every 5 ms, whereas Scenario B's "DL-heavy" setting only allocates 32 UL symbols. This doubling of uplink transmission opportunities directly allows Scenario C to achieve a higher measured uplink throughput (124.42 Mbps) compared to Scenario B (109.12 Mbps).
 
 ---
 
