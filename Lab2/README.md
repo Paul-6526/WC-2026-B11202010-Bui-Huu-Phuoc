@@ -103,22 +103,9 @@ The tables below illustrate the TDD time allocation derived from SIB1. The refer
 *Repeating duration: 5 ms (10 slots)*
 <img width="2574" height="635" alt="Screenshot_20261104_103958_Samsung Notes" src="https://github.com/user-attachments/assets/c9048c77-0b09-4b40-a6d4-ed73b351057e" />
 
-| Slot Index | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Allocation** | Full D | Full D | Full D | Full D | Full D | Full D | Full D | Mixed | Full U | Full U |
-| **Symbols Detail** | 14 D | 14 D | 14 D | 14 D | 14 D | 14 D | 14 D | 6 D, 4 F, 4 U | 14 U | 14 U |
-
 **2. Balanced Configuration (Scenario C)**
 *Repeating duration: 2.5 ms (5 slots). To fill the common 5 ms axis, the pattern repeats twice.*
 <img width="2554" height="667" alt="Screenshot_20261104_104541_Samsung Notes" src="https://github.com/user-attachments/assets/d554bdce-04e3-4ad6-918e-a09f00044fde" />
-
-| Slot Index | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Allocation** | Full D | Full D | Mixed | Full U | Full U | Full D | Full D | Mixed | Full U | Full U |
-| **Symbols Detail** | 14 D | 14 D | 6 D, 4 F, 4 U | 14 U | 14 U | 14 D | 14 D | 6 D, 4 F, 4 U | 14 U | 14 U |
-| **Period** | <td colspan="5" align="center">**Pattern 1 (0 - 2.5 ms)**</td> | <td colspan="5" align="center">**Pattern 2 (2.5 - 5.0 ms)**</td> |
-
-<br>
 
 **Per-sequence Configuration Table:**
 
