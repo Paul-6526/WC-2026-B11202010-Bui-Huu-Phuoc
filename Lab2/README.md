@@ -96,6 +96,18 @@
 *   **Balanced (C):** <img width="2880" height="1628" alt="Screenshot 2026-11-04 094152" src="https://github.com/user-attachments/assets/b64610f0-f70f-4cb8-adda-dc873dd2cd23" />
 ### 4.4 Draw the TDD Time Allocation
 
+The TDD time allocation diagrams below illustrate the configuration derived from SIB1. The reference subcarrier spacing (SCS) is 30 kHz, where one slot duration is 0.5 ms and contains 14 OFDM symbols.
+
+*   **DL-heavy (A/B):** The repeating period is 5 ms (10 slots).
+    *   Slots 0–6: Full Downlink (D)
+    *   Slot 7: Mixed (6 D, 4 Flexible (F), 4 Uplink (U))
+    *   Slots 8–9: Full Uplink (U)
+
+*   **Balanced (C):** The repeating period is 2.5 ms (5 slots). To fill the common 5 ms axis, the pattern repeats twice.
+    *   Slots 0–1: Full Downlink (D)
+    *   Slot 2: Mixed (6 D, 4 F, 4 U)
+    *   Slots 3–4: Full Uplink (U)
+    *   *(This sequence repeats for Slots 5–9)*
 `[KÉO THẢ HÌNH VẼ SƠ ĐỒ TDD ALLOCATION CỦA BẠN VÀO ĐÂY]`
 *(Mẹo vẽ: Tại SCS 30kHz, 1 Slot = 0.5ms = 14 symbols.
 - Mạch DL-heavy (5ms = 10 slots): 7 slot đầu là Full D. Slot thứ 8 có 6 symbol D, 4 symbol F, 4 symbol U. Hai slot 9,10 là Full U.
