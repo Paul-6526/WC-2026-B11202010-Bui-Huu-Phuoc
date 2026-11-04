@@ -92,9 +92,8 @@
 | **Is pattern2 present?** | No | No |
 
 *Proof Screenshots (SIB1 tdd-UL-DL-ConfigurationCommon):*
-*   **DL-heavy (A/B):** `[KÉO THẢ ẢNH SIB1 DL-HEAVY BẠN ĐÃ CHỤP VÀO ĐÂY]`
-*   **Balanced (C):** `[KÉO THẢ ẢNH SIB1 BALANCED BẠN ĐÃ CHỤP VÀO ĐÂY]`
-
+*   **DL-heavy (A/B):** <img width="2880" height="1614" alt="Screenshot 2026-11-04 093955" src="https://github.com/user-attachments/assets/efb3a0ab-1646-4e30-a0ab-cdbf02abcee3" />
+*   **Balanced (C):** <img width="2880" height="1628" alt="Screenshot 2026-11-04 094152" src="https://github.com/user-attachments/assets/b64610f0-f70f-4cb8-adda-dc873dd2cd23" />
 ### 4.4 Draw the TDD Time Allocation
 
 `[KÉO THẢ HÌNH VẼ SƠ ĐỒ TDD ALLOCATION CỦA BẠN VÀO ĐÂY]`
