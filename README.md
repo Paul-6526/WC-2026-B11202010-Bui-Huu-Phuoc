@@ -35,6 +35,10 @@ In this lab, you will deploy your own 5G Standalone (SA) network using OpenAirIn
     - Delivery: [My Lab 3 Report](https://github.com/Paul-6526/WC-2026-B11202010-Bui-Huu-Phuoc/blob/main/Lab3/report.md)
     -  [ ] Peer review : [Vote the Top3](https://forms.gle/Mvza68DFBzPcZXfW6)
 
-
-
+- **LAB 4 : 5G CU/DU Split Deployment and F1-C/F1-U Analysis**
+    -  **Date: Nov 18, 2026**
+    - Goal:
+In this lab, you will replace the monolithic gNB from Lab 3 with a split gNB-CU and gNB-DU. Capture and analyze both F1-C (F1AP over SCTP) and F1-U (GTP-U over UDP) in a single PCAP file. Verify that the UE can still establish a PDU session and reach the external data network.
+    - Delivery: [My Lab 4 Report](https://github.com/Paul-6526/WC-2026-B11202010-Bui-Huu-Phuoc/blob/main/Lab4/report.md)
+    -  [ ] Peer review : [Vote the Top3](https://forms.gle/Mvza68DFBzPcZXfW6)
 
