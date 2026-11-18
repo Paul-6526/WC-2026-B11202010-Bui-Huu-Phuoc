@@ -54,6 +54,9 @@ Based on the provided configuration files, the setup parameters are as follows:
 
 The PCAP file was successfully captured on the loopback interface (`lo`) of the Azure VM. Since the Azure Cloud Shell GUI download feature encountered issues, the file `lab4-f1-complete.pcap` was securely downloaded to the local Windows machine using the Command Prompt (`scp` command) for Wireshark analysis.
 
+**Azure Cloud Shell GUI download feature encountered issues:**
+<img width="2880" height="1534" alt="Screenshot 2026-11-18 093334" src="https://github.com/user-attachments/assets/dd24be3e-b61c-444b-ba19-fbecee9d7664" />
+
 **Evidence (SCP Download via CMD):**
 <img width="2880" height="1700" alt="Screenshot 2026-11-18 093255" src="https://github.com/user-attachments/assets/ea8123a3-c700-4dd7-ada0-99e06278ea1c" />
 
@@ -90,6 +93,8 @@ The PCAP file was successfully captured on the loopback interface (`lo`) of the 
 ## 7. Task 5 — Analyze F1-U (GTP-U / UDP)
 
 **Evidence (GTP-U T-PDU):**
+<img width="2880" height="1334" alt="Screenshot 2026-11-18 094324" src="https://github.com/user-attachments/assets/a546645a-58b8-4f79-bd2b-d085b1b2cbe4" />
+
 <img width="2880" height="1630" alt="Screenshot 2026-11-18 094333" src="https://github.com/user-attachments/assets/1f7cb67d-f1ee-4dd6-bf2e-4f9b1e6ba97e" />
 *Observation: The screenshot shows a G-PDU (T-PDU) carrying user data from 127.0.0.4 to 127.0.0.3, with TEID: 0xb03b116b (2956661099).*
 
