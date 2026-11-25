@@ -41,4 +41,8 @@ In this lab, you will deploy your own 5G Standalone (SA) network using OpenAirIn
 In this lab, you will replace the monolithic gNB from Lab 3 with a split gNB-CU and gNB-DU. Capture and analyze both F1-C (F1AP over SCTP) and F1-U (GTP-U over UDP) in a single PCAP file. Verify that the UE can still establish a PDU session and reach the external data network.
     - Delivery: [My Lab 4 Report](https://github.com/Paul-6526/WC-2026-B11202010-Bui-Huu-Phuoc/blob/main/Lab4/report.md)
     -  [ ] Peer review : [Vote the Top3](https://forms.gle/dZknk7FfgeMVy5gW8)
-
+- **LAB 5 : From Initial Access to RRC Connection Setup**
+  - **Date: Nov 25, 2026**
+  - Goal:
+    In this lab, you will trace a successful 5G NR Initial Access procedure from cell search to `RRC_CONNECTED` using UE logs and Wireshark MAC-NR PCAP to identify MIB/SIB1, 4-step Random Access (Msg1–Msg4), and RRC setup messages, then reconstruct the UE–gNB message sequence and distinguish RAN access from 5GC registration.
+  - Delivery: [My Lab 5 Report](https://github.com/Paul-6526/WC-2026-B11202010-Bui-Huu-Phuoc/blob/main/Lab5/report.md)
