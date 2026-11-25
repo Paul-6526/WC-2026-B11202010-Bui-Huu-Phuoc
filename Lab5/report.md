@@ -116,8 +116,8 @@ In Frame `490`, the gNB responds to the UE's preamble (`RAPID = 16`) with a **Ra
 * **Context RNTI:** `61982` (`0xf21e`)
 * **rrc-TransactionIdentifier:** `1`
 
-<!-- KÉO THẢ ẢNH Screenshot 2026-11-25 085114.jpg VÀO ĐÂY -->
-<!-- KÉO THẢ ẢNH Screenshot 2026-11-25 085128.jpg VÀO ĐÂY -->
+<img width="2880" height="1708" alt="Screenshot 2026-11-25 085114" src="https://github.com/user-attachments/assets/a9bcd43a-8352-4cbb-bfb1-612317f0e88f" />
+<img width="2880" height="1656" alt="Screenshot 2026-11-25 085128" src="https://github.com/user-attachments/assets/4972160f-4f5f-4643-aec1-fcd2fbd55efe" />
 
 **Questions & Answers:**
 1. **Does the `Context RNTI` still match the `Temporary C-RNTI` in the RAR?**
@@ -135,7 +135,7 @@ In Frame `490`, the gNB responds to the UE's preamble (`RAPID = 16`) with a **Ra
 * `State = NR_RRC_CONNECTED`: line `90`
 * `Generating RRCSetupComplete`: line `93`
 
-<!-- KÉO THẢ ẢNH Screenshot 2026-11-25 085313.png VÀO ĐÂY -->
+<img width="2880" height="1298" alt="Screenshot 2026-11-25 085313" src="https://github.com/user-attachments/assets/43761207-a2cb-4efd-b96d-0840329a2323" />
 
 **Questions & Answers:**
 1. **In log order, what are the three events from successful Random Access to generating `RRCSetupComplete`?**
