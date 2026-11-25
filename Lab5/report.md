@@ -157,7 +157,7 @@ sequenceDiagram
 
     Note over UE: State: RRC_IDLE (Cell Search & Sync, PCI=0)
 
-    gNB->>UE: MIB / SIB1 (Frames 1, 2)<br/>Broadcast cell config, CORESET#0, and RACH parameters
+    gNB->>UE: MIB / SIB1 (Frames 1, 2)<br/>Broadcast cell config, CORESET0, and RACH parameters
     UE->>gNB: Msg1: PRACH Preamble (Frame 489, RAPID=16)<br/>Request initial uplink access on selected PRACH occasion
     gNB->>UE: Msg2: RAR (Frame 490, RAPID=16, Temp C-RNTI=61982)<br/>Provide Timing Advance, UL grant, and Temporary C-RNTI
     UE->>gNB: Msg3: RRCSetupRequest (Frame 491, RNTI=61982)<br/>Request RRC connection with UE identity and establishment cause
